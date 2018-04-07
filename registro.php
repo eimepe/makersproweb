@@ -4,22 +4,22 @@
 
 
 
-$con = new PDO('mysql:host=localhost;dbname=makerspr_videos', 'makerspr_videos', '92040166809');
+$con = new PDO('mysql:host=mysqlcarwest.cdbsdrwiat5y.us-west-2.rds.amazonaws.com;dbname=makerspr_videos', 'eimepe', 'eimepe73');
   $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 $consultaf = $con->prepare('SELECT * FROM usuario where codigo = :iduser and estado = 1 ');
   $consultaf->execute(array(':iduser'=>$_POST['codigo']));
-   $registrosf = $consultaf->fetch(); 
-   
-   
+   $registrosf = $consultaf->fetch();
+
+
    if($registrosf['id']!=""){
-	   
+
 	   	$response["success"] = 0;
         die(json_encode($response));
    }else{
-  
-  
+
+
 $consulta = $con->prepare('INSERT INTO usuario (
 codigo,
 clave,
@@ -60,22 +60,22 @@ estado
 ':diamante'=>$_POST['diamante'],
 ':edad'=>$_POST['edad'],
 ':estado'=>0));
-   
+
 
   $ids = $con->lastInsertId();
-  
 
-	  
 
-	  
-  
 
-  
-	
-  
+
+
+
+
+
+
+
   if($ids!=0){
-	  
-	  
+
+
 		 $para      = 'carlosymonica21@gmail.com';
 $titulo    = 'Nuevos Usuarios para activar';
 $mensaje   = 'Nuevos Usuarios para activar';
@@ -96,21 +96,21 @@ $cabeceras1 = 'From: webmaster@makerspro.com.co' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 mail($para1, $titulo1, $mensaje1, $cabeceras1);
-		  
+
 		$response["success"] = 1;
-	
-	
-		
+
+
+
          echo json_encode($response);
 	  }else{
-		  
+
 		$response["success"] = 0;
         die(json_encode($response));
 	  }
-	  
-	  
+
+
    }
-  
-  
-  
+
+
+
 ?>
