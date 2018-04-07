@@ -2,8 +2,8 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=makerspr_videos',
-    'username' => 'makerspr_videos',
-    'password' => '92040166809',
+    'dsn' => 'mysql:host=mysqlcarwest.cdbsdrwiat5y.us-west-2.rds.amazonaws.com;dbname=makerspr_videos',
+    'username' => 'eimepe',
+    'password' => 'eimepe73',
     'charset' => 'utf8',
 ];
