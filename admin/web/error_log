@@ -1,0 +1,50 @@
+[06-Jul-2016 20:03:26 America/Chicago] PHP Warning:  POST Content-Length of 184509368 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[06-Jul-2016 20:10:33 America/Chicago] PHP Warning:  POST Content-Length of 184509368 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[06-Jul-2016 20:19:40 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[06-Jul-2016 20:31:26 America/Chicago] PHP Warning:  POST Content-Length of 184509368 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[06-Jul-2016 20:37:41 America/Chicago] PHP Warning:  POST Content-Length of 184509361 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 17:39:19 America/Chicago] PHP Warning:  POST Content-Length of 138093456 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 17:47:58 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[19-Jul-2016 20:36:39 America/Chicago] PHP Warning:  POST Content-Length of 192068368 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 20:47:51 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 79386817 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2-debug/LogTarget.php on line 58
+[19-Jul-2016 20:56:22 America/Chicago] PHP Warning:  POST Content-Length of 192068368 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 21:07:47 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[19-Jul-2016 21:17:12 America/Chicago] PHP Warning:  POST Content-Length of 184509342 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 21:20:57 America/Chicago] PHP Warning:  POST Content-Length of 184509357 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 21:38:10 America/Chicago] PHP Warning:  POST Content-Length of 270986966 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 21:45:50 America/Chicago] PHP Warning:  POST Content-Length of 184509342 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 21:54:36 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[19-Jul-2016 22:04:23 America/Chicago] PHP Warning:  POST Content-Length of 270986956 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 22:11:19 America/Chicago] PHP Warning:  POST Content-Length of 184509342 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[19-Jul-2016 22:23:56 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[21-Jul-2016 10:45:02 America/Chicago] PHP Warning:  POST Content-Length of 270986955 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[21-Jul-2016 10:55:46 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[21-Jul-2016 11:03:57 America/Chicago] PHP Warning:  POST Content-Length of 184509342 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[21-Jul-2016 11:20:16 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[21-Jul-2016 11:30:24 America/Chicago] PHP Warning:  POST Content-Length of 184509362 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[21-Jul-2016 11:33:24 America/Chicago] PHP Warning:  POST Content-Length of 184509342 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[21-Jul-2016 11:41:46 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[21-Jul-2016 13:16:01 America/Chicago] PHP Warning:  POST Content-Length of 139489149 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[21-Jul-2016 13:16:51 America/Chicago] PHP Fatal error:  Out of memory (allocated 18087936) (tried to allocate 12320768 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[23-Jul-2016 11:16:56 America/Chicago] PHP Warning:  POST Content-Length of 214830779 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[23-Jul-2016 11:27:05 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[23-Jul-2016 11:50:43 America/Chicago] PHP Warning:  POST Content-Length of 214830779 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[23-Jul-2016 12:00:50 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[23-Jul-2016 12:23:31 America/Chicago] PHP Warning:  POST Content-Length of 270986955 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[23-Jul-2016 12:33:11 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[25-Jul-2016 17:05:11 America/Chicago] PHP Warning:  POST Content-Length of 214830779 bytes exceeds the limit of 134217728 bytes in Unknown on line 0
+[25-Jul-2016 17:14:34 America/Chicago] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 128450560 bytes) in /home/makerspro/public_html/admin/vendor/yiisoft/yii2/web/Request.php on line 345
+[04-Sep-2017 22:19:22 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/makerspro/public_html/admin/views/videos/_form.php on line 65
+[12-Sep-2017 14:38:45 America/Chicago] PHP Fatal error:  Call to undefined function app\controllers\save() in /home/makerspro/public_html/admin/controllers/VideosController.php on line 185
+[12-Sep-2017 21:42:00 America/Chicago] PHP Fatal error:  Call to a member function orderBy() on array in /home/makerspro/public_html/admin/views/videos/_form.php on line 34
+[12-Sep-2017 21:42:29 America/Chicago] PHP Fatal error:  Call to a member function orderBy() on array in /home/makerspro/public_html/admin/views/videos/_form.php on line 34
+[12-Sep-2017 21:42:43 America/Chicago] PHP Fatal error:  Call to a member function orderBy() on array in /home/makerspro/public_html/admin/views/videos/_form.php on line 34
+[20-Feb-2018 17:44:05 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/makerspro/public_html/admin/controllers/VideosController.php on line 75
+[20-Feb-2018 17:44:08 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/makerspro/public_html/admin/controllers/VideosController.php on line 75
+[20-Feb-2018 17:44:35 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/makerspro/public_html/admin/controllers/VideosController.php on line 75
+[20-Feb-2018 17:45:26 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/makerspro/public_html/admin/controllers/VideosController.php on line 75
+[20-Feb-2018 17:46:51 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/makerspro/public_html/admin/controllers/VideosController.php on line 75
+[21-Feb-2018 20:12:24 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/makerspro/public_html/admin/controllers/VideosController.php on line 102
+[21-Feb-2018 20:12:26 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/makerspro/public_html/admin/controllers/VideosController.php on line 102
+[21-Feb-2018 20:12:38 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/makerspro/public_html/admin/controllers/VideosController.php on line 102
+[21-Feb-2018 20:12:48 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/makerspro/public_html/admin/controllers/VideosController.php on line 102
