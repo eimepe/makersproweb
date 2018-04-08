@@ -1,7 +1,7 @@
 <?php
 
 
-
+$data = json_decode(file_get_contents('php://input'), true);
 
 
 $con = new PDO('mysql:host=mysqlcarwest.cdbsdrwiat5y.us-west-2.rds.amazonaws.com;dbname=makerspr_videos', 'eimepe', 'eimepe73');
@@ -9,7 +9,7 @@ $con = new PDO('mysql:host=mysqlcarwest.cdbsdrwiat5y.us-west-2.rds.amazonaws.com
 
 
 $consultaf = $con->prepare('SELECT * FROM usuario where codigo = :iduser and estado = 1 ');
-  $consultaf->execute(array(':iduser'=>$_POST['codigo']));
+  $consultaf->execute(array(':iduser'=>$data['codigo']));
    $registrosf = $consultaf->fetch();
 
 
@@ -47,18 +47,18 @@ estado
 :diamante,
 :edad,
 :estado) ');
-  $consulta->execute(array(':codigo'=>$_POST['codigo'],
-':clave'=>$_POST['clave'],
-':nombre'=>$_POST['nombre'],
-':cc'=>$_POST['cc'],
-':tel'=>$_POST['tel'],
-':direccion'=>$_POST['direccion'],
-':correo'=>$_POST['correo'],
-':austiciador'=>$_POST['austiciador'],
-':platino'=>$_POST['platino'],
-':esmeralda'=>$_POST['esmeralda'],
-':diamante'=>$_POST['diamante'],
-':edad'=>$_POST['edad'],
+  $consulta->execute(array(':codigo'=>$data['codigo'],
+':clave'=>$data['clave'],
+':nombre'=>$data['nombre'].' '.$data['apellido'],
+':cc'=>"0",
+':tel'=>$data['tel'],
+':direccion'=>"0",
+':correo'=>$data['usuario'],
+':austiciador'=>"",
+':platino'=>$data['platino'],
+':esmeralda'=>"0",
+':diamante'=>"0",
+':edad'=>"0",
 ':estado'=>0));
 
 
@@ -76,7 +76,7 @@ estado
   if($ids!=0){
 
 
-		 $para      = 'carlosymonica21@gmail.com';
+$para      = 'carlosymonica21@gmail.com';
 $titulo    = 'Nuevos Usuarios para activar';
 $mensaje   = 'Nuevos Usuarios para activar';
 $cabeceras = 'From: webmaster@makerspro.com.co' . "\r\n" .
@@ -88,7 +88,7 @@ mail($para, $titulo, $mensaje, $cabeceras);
 
 
 
-		 $para1     =$_POST['correo'];
+		 $para1     =$data['usuario'];
 $titulo1    = 'Gracias por Registrarse';
 $mensaje1   = 'Gracias por Registrarse Su cuenta esta en proceso de Activacion';
 $cabeceras1 = 'From: webmaster@makerspro.com.co' . "\r\n" .
