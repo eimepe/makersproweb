@@ -1,62 +1,50 @@
-<?php 
- 
-    
-    
-    
-    
-  
- 
+<?php
 
-require('dbConnect.php');
-
-
-$categoria = $_GET['categoria']; 
-$subcategoria = $_GET['subcategoria']; 
-$ultcategoria = $_GET['ultcategoria']; 
+require("../config.php");
+$categoria = $_GET['categoria'];
+$subcategoria = $_GET['subcategoria'];
+$ultcategoria = $_GET['ultcategoria'];
 
 
 
-//Si hay registros
- if (1 > 0) {
-    //numero de registros por página
-    $rowsPerPage = 4;
+$query = "SELECT * FROM videos where categoria =". $categoria. " and subcategoria= ".$subcategoria." and ultcategoria= ".$ultcategoria." ORDER BY id ASC";
 
-    //por defecto mostramos la página 1
-    $pageNum = 1;
+$query_params = array();
 
-    // si $_GET['page'] esta definido, usamos este número de página
-    if(isset($_GET['page'])) {
-        sleep(1);
-        $pageNum = $_GET['page'];
-    }
-    
-    
-    $res = array();
-
-    //contando el desplazamiento
-    $offset = ($pageNum - 1) * $rowsPerPage;
-    $total_paginas = ceil($num_total_registros / $rowsPerPage);
-
-    $query_services = mysql_query("SELECT * FROM videos where categoria =". $categoria. " and subcategoria= ".$subcategoria." and ultcategoria= ".$ultcategoria." ORDER BY id ASC", $conexion);
-    while ($row_services = mysql_fetch_array($query_services)) {
- array_push($res, array(
- "name"=>$row_services['video'],
- "publisher"=>$row_services['id'],
- "image"=>$row_services['img'])
- );
- }
- //Displaying the array in json format 
- echo json_encode($res);
-
-}else{
-    echo "over";
+try {
+    $stmt   = $db->prepare($query);
+    $result = $stmt->execute($query_params);
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+catch (PDOException $ex) {
+    //para testear pueden utilizar lo de abajo
+    //die("la consulta murio " . $ex->getMessage());
+
+    $response["success"] = 0;
+    $response["message"] = "Problema con la base de datos, vuelve a intetarlo";
+    die(json_encode($response));
+
+}
+
+//la variable a continuación nos permitirará determinar
+//si es o no la información correcta
+//la inicializamos en "false"
+$validated_info = false;
+
+//bamos a buscar a todas las filas
+$row = $stmt->fetchAll();
+
+
+
+$res = array();
+foreach ($row as $row_services){
+
+  array_push($res, array(
+    "name"=>$row_services['video'],
+    "publisher"=>$row_services['id'],
+    "image"=>$row_services['img']
+  )
+  );
+
+}
+
+ echo json_encode($res);
