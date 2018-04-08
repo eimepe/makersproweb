@@ -1,8 +1,4 @@
 <?php
-
-
-require('dbConnect.php');
-
 require("../config.php");
 
 
