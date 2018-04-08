@@ -1,48 +1,51 @@
 <?php
- 
 
-require('dbConnect.php');
+
+require("../config.php");
 header ('Content-type: text/html; charset=utf-8');
-$query_num_services =  mysql_query("SELECT * FROM categorias ", $conexion);
-$num_total_registros = mysql_num_rows($query_num_services);
 
-//Si hay registros
- if ($num_total_registros > 0) {
-    //numero de registros por página
-    $rowsPerPage = 7;
 
-    //por defecto mostramos la página 1
-    $pageNum = 1;
 
-    // si $_GET['page'] esta definido, usamos este número de página
-    if(isset($_GET['page'])) {
-        sleep(1);
-        $pageNum = $_GET['page'];
+
+    $query = "SELECT * FROM categorias ORDER BY posicion ASC";
+
+    $query_params = array();
+
+    try {
+        $stmt   = $db->prepare($query);
+        $result = $stmt->execute($query_params);
     }
-    
-    
+    catch (PDOException $ex) {
+        //para testear pueden utilizar lo de abajo
+        //die("la consulta murio " . $ex->getMessage());
+
+        $response["success"] = 0;
+        $response["message"] = "Problema con la base de datos, vuelve a intetarlo";
+        die(json_encode($response));
+
+    }
+
+    //la variable a continuación nos permitirará determinar
+    //si es o no la información correcta
+    //la inicializamos en "false"
+    $validated_info = false;
+
+    //bamos a buscar a todas las filas
+    $row = $stmt->fetchAll();
+
+
+
     $res = array();
+    foreach ($row as $row_services){
 
-    //contando el desplazamiento
-    $offset = ($pageNum - 1) * $rowsPerPage;
-    $total_paginas = ceil($num_total_registros / $rowsPerPage);
+      array_push($res, array(
+      "name"=>utf8_encode ($row_services['categoria']),
+      "publisher"=>$row_services['id'],
+      "image"=>$row_services['img'],
+      "tipo"=>$row_services['tipo']
+      )
+      );
 
-    $query_services = mysql_query("SELECT * FROM categorias ORDER BY posicion ASC ", $conexion);
-    while ($row_services = mysql_fetch_array($query_services)) {
- array_push($res, array(
- "name"=>utf8_encode ($row_services['categoria']),
- "publisher"=>$row_services['id'],
- "image"=>$row_services['img'],
- "tipo"=>$row_services['tipo']
- )
- );
- }
- //Displaying the array in json format 
- echo json_encode($res);
+    }
 
-}else{
-    echo "over";
-}
-    
-    
-    
+     echo json_encode($res);
