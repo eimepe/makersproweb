@@ -1,10 +1,10 @@
-<?php 
- class Conexion extends PDO { 
+<?php
+ class Conexion extends PDO {
    private $tipo_de_base = 'mysql';
-   private $host = 'localhost';
+   private $host = 'mysqlcarwest.cdbsdrwiat5y.us-west-2.rds.amazonaws.com';
    private $nombre_de_base = 'makerspr_videos';
-   private $usuario = 'makerspr_videos';
-   private $contrasena = '92040166809'; 
+   private $usuario = 'eimepe';
+   private $contrasena = 'eimepe73'; 
    public function __construct() {
       //Sobreescribo el método constructor de la clase PDO.
       try{
@@ -13,6 +13,6 @@
          echo 'Ha surgido un error y no se puede conectar a la base de datos. Detalle: ' . $e->getMessage();
          exit;
       }
-   } 
- } 
+   }
+ }
 ?>

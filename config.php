@@ -1,9 +1,9 @@
 <?php
 
  //los atributos de abajo son los que tenemos que modificar
-    $username = "makerspr_videos";
-    $password = "92040166809";
-    $host = "localhost";
+    $username = "eimepe";
+    $password = "eimepe73";
+    $host = "mysqlcarwest.cdbsdrwiat5y.us-west-2.rds.amazonaws.com";
     $dbname = "makerspr_videos";
 
     // Para saber más de que se trata UTF-8 visita http://en.wikipedia.org/wiki/UTF-8
