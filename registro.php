@@ -51,7 +51,7 @@ estado
 ':clave'=>$data['clave'],
 ':nombre'=>$data['nombre'].' '.$data['apellido'],
 ':cc'=>"0",
-':tel'=>$data['tel'],
+':tel'=>$data['telefono'],
 ':direccion'=>"0",
 ':correo'=>$data['usuario'],
 ':austiciador'=>"",
