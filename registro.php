@@ -8,7 +8,7 @@ $con = new PDO('mysql:host=mysqlcarwest.cdbsdrwiat5y.us-west-2.rds.amazonaws.com
   $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-$consultaf = $con->prepare('SELECT * FROM usuario where codigo = :iduser and estado = 1 ');
+$consultaf = $con->prepare('SELECT * FROM usuario where codigo = :iduser ');
   $consultaf->execute(array(':iduser'=>$data['codigo']));
    $registrosf = $consultaf->fetch();
 
