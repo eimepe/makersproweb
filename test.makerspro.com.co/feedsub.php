@@ -37,10 +37,10 @@ require("../config.php");
     foreach ($row as $row_services){
 
       array_push($res, array(
-      "name"=>$row_services['categoria'],
-      "publisher"=>$row_services['id'],
-      "image"=>$row_services['img'],
-      "tipo"=>$row_services['tipo']
+        "name"=>utf8_encode ($row_services['nombre']),
+        "publisher"=>$row_services['id'],
+        "image"=>$row_services['img'],
+        "tipo"=>$row_services['estado']
       )
       );
 
