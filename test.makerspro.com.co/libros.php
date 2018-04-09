@@ -40,8 +40,9 @@ foreach ($row as $row_services){
 
   array_push($res, array(
     "name"=>$row_services['nombre'],
-    "publisher"=>$row_services['img'],
-    "image"=>$row_services['url']
+    "publisher"=>$row_services['id'],
+    "url"=>$row_services['url'],
+    "image"=>$row_services['img']
   )
   );
 
